@@ -1,0 +1,23 @@
+/*
+This file is deprecated and should not be used.
+Please use the new Table wrapper component insead of this.
+
+*/
+
+.table-header {
+  background-color: black;
+  color: white;
+  font-size: 12px;
+  font-family: Poppins, Helvetica, "sans-serif"
+}
+
+.table-row {
+  font-size: 12px !important;
+  font-family: Poppins, Helvetica, "sans-serif" !important;
+}
+
+
+.ag-cell-focus, .ag-cell {
+  border: none !important;
+  outline: none!important;
+}

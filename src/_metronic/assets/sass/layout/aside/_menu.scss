@@ -1,0 +1,160 @@
+//
+// Menu
+//
+// Aside menu
+.aside-menu {
+  .menu {
+    // Link padding x
+    @include menu-link-padding-x(get($aside-config, padding-x));
+
+    // Menu indention
+    @include menu-link-indention(
+      get($aside-config, menu-indention),
+      get($aside-config, padding-x)
+    );
+  }
+
+  // Item
+  .menu-item {
+    padding: 0;
+
+    // Menu Link
+    .menu-link {
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+    }
+
+    // Icon
+    .menu-icon {
+      justify-content: flex-start;
+    }
+  }
+}
+
+// Aside dark theme
+.aside-dark {
+  .hover-scroll-overlay-y {
+    --scrollbar-space: 0.4rem;
+
+    @include scrollbar-color(
+      get($aside-config, scrollbar-color),
+      get($aside-config, scrollbar-hover-color)
+    );
+  }
+
+  .menu {
+    .menu-item {
+      .menu-section {
+        color: #4c4e6f !important;
+      }
+
+      //$title-color, $icon-color, $bullet-color, $arrow-color, $bg-color
+      @include menu-link-default-state(
+        #9899ac,
+        #494b74,
+        #9899ac,
+        #9899ac,
+        null
+      );
+      @include menu-link-hover-state(
+        $white,
+        $primary,
+        $primary,
+        $white,
+        #1b1b28
+      );
+      @include menu-link-here-state(
+        $white,
+        $primary,
+        $primary,
+        $white,
+        #1b1b28
+      );
+      @include menu-link-show-state(
+        $white,
+        $primary,
+        $primary,
+        $white,
+        #1b1b28
+      );
+      @include menu-link-active-state(
+        $white,
+        $primary,
+        $primary,
+        $white,
+        #1b1b28
+      );
+    }
+  }
+}
+
+// Aside light theme
+.aside-light {
+  .hover-scroll-overlay-y {
+    --scrollbar-space: 0.4rem;
+
+    @include scrollbar-color(
+      get($aside-config, scrollbar-color),
+      get($aside-config, scrollbar-hover-color)
+    );
+  }
+  .menu {
+      font-size: 14px;
+      font-weight: 600;
+    .menu-item {
+      margin-left:  10px;
+      
+
+      .menu-section {
+        color: #4c4e6f !important;
+      }
+
+      //$title-color, $icon-color, $bullet-color, $arrow-color, $bg-color
+      @include menu-link-default-state(
+        #1b1b28,
+        #494b74,
+        #9899ac,
+        #1b1b28,
+        null
+      );
+      @include menu-link-hover-state(
+      #1b1b28,
+      #494b74,
+      #9899ac,
+      #1b1b28,
+      null
+      );
+      @include menu-link-here-state(
+        $primary,
+        $primary,
+        #9899ac,
+        #1b1b28,
+        null
+      );
+      @include menu-link-show-state(
+        $primary,
+        $primary,
+        $primary,
+        $primary,
+        null
+      );
+      @include menu-link-active-state(
+        $primary,
+        $primary,
+        $primary,
+        $primary,
+        #EFF6FD
+      );
+    }
+  }
+}
+
+.menu-item>.active{
+    border-left: 3px solid blue;
+    border-radius: 5px;
+}
+
+.menu-item:hover{
+  background-color: #F7F9FB;
+  border-radius: 5px;
+}

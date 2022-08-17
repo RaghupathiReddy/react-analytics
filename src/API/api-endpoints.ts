@@ -1,0 +1,15 @@
+export const API_ROUTE = {
+  modelComparison: "/project/model_comparison",
+  modelResults: "/project/bias_results",
+  edaScreenTwo: "/project/eda_data",
+  biasFeatures: "/project/bias_features",
+  featureExplainbility: "/model/feature_explainability",
+  dataSummary: "/project/data_summary",
+  businessTree: "/project/business_tree",
+  globalExplainability: "/model/global_explainer",
+  localExplainer : "/model/local_explainer",
+  azureQueue: "/azure_message_queue",
+  globalExplainabilitySummary: "/model/global_explainer/summary",
+  featureRanking : '/model/feature-ranking',
+  globalExplainabilityShapData: "/model/global-records",
+};

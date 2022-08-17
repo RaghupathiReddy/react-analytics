@@ -1,0 +1,175 @@
+//
+// Form Control
+//
+
+
+// Form control
+.form-control {
+	box-shadow: none !important;
+
+	// Dropdown shown state
+	.dropdown.show > & {
+		color: $input-focus-color;
+		background-color: $input-focus-bg;
+  	    border-color: $input-focus-border-color;
+	}
+
+	// Readonly state
+	&[readonly] {
+		background-color: $input-readonly-bg;
+	}
+
+	// Solid style
+	&.form-control-solid {
+		background-color: $input-solid-bg;
+		border-color: $input-solid-bg;
+		@include placeholder($input-solid-placeholder-color);
+		color: $input-solid-color;
+		transition: $transition-input;
+
+		.dropdown.show > &,
+		&:active,
+		&.active,
+		&:focus,
+		&.focus {
+			background-color: $input-solid-bg-focus;
+			border-color: $input-solid-bg-focus;
+			color: $input-solid-color;
+			transition: $transition-input;
+		}
+	}
+
+	// Transparent style
+	&.form-control-transparent {
+		background-color: transparent;
+		border-color: transparent;
+
+		.dropdown.show > &,
+		&:active,
+		&.active,
+		&:focus,
+		&.focus {
+			background-color: transparent;
+			border-color: transparent;
+		}
+	}
+
+	// Flush
+	&.form-control-flush {
+		@include input-reset();
+	}
+}
+
+// Placeholder colors
+.placeholder-gray-500 {
+	@include placeholder($gray-500);
+}
+
+.placeholder-white {
+	@include placeholder($white);
+}
+
+// Textarea reset resize
+.resize-none {
+	resize: none;
+}
+
+
+// TODO: The below code(till line no: 175) needs to restructed into specific files
+
+.create-new-model-header{
+    margin-bottom: 1rem;
+}
+
+.create-new-model-title {
+    font-size: 16px;
+    color: #00111D;
+    margin: 0 0 0.5rem 0; 
+}
+
+.create-new-model-use-case {
+    color: #8B8B8B;
+    margin: 0 0 0.5rem 0;
+}
+
+.create-new-model-form-input {
+    color: #002B49;
+    margin-top: 1rem;
+    text-justify: auto;
+}
+
+.create-new-model-options {
+    margin: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.create-new-model-upload{
+    margin: 0.5rem;
+    line-height: 1.2;
+}
+
+.upload-file{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    margin-top: 1rem;
+}
+
+.custom-file-label{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+
+.custom-file-label::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    display: block;
+    height: calc(1.5em + 0.75rem);
+    padding: 0.375rem 0.75rem;
+    line-height: 1.5;
+    color: #495057;
+    content: "Browse";
+    background-color: #e9ecef;
+    border-left: inherit;
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.create-new-model-block{
+    background: linear-gradient(0deg, #EBFAFF, #EBFAFF);
+    border: 1px solid #CDCDCD;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 8px rgb(0 0 0 / 12%);
+    border-radius: 5px;
+    margin-left: 0.5rem;
+    padding: 1rem;
+}
+
+.use_case_body{
+    width: 12rem;
+    height: 40px;
+    align-items: center;
+    padding-top: 0.8rem;
+    padding-bottom: 0rem;
+    background: linear-gradient(180deg, #FFFFFF 0%, #E9E9E9 178.33%);
+    border: 1px solid #E9E9E9;
+    box-sizing: border-box;
+    box-shadow: 0px 3px 8px rgb(0 0 0 / 12%);
+    border-radius: 5px;
+    margin: 0.5rem;
+    cursor: pointer;
+}

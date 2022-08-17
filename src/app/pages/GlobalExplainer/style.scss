@@ -1,0 +1,13 @@
+.range {
+    -webkit-appearance: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.range::-webkit-slider-thumb {
+     -webkit-appearance: none;
+    background-color: #3699FF;
+    width: 15px;
+    height:15px;
+    border-radius: 50%;
+}

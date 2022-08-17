@@ -1,0 +1,40 @@
+trigger:
+- dev
+
+pool:
+  vmImage: windows-latest
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '14.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    npm install -g serve
+  displayName: 'npm install serve'
+
+- script: |
+    npm install
+  displayName: 'npm install'
+
+- script: |
+    npm run build
+    displayName: 'npm build'
+
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Pipeline.Workspace)'
+    artifact: 'test'
+    publishLocation: 'pipeline'
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: '276050df-e341-4be2-83d9-174670f54733'
+    appType: 'webAppLinux'
+    appName: 'plainxai-analytics'
+    deployToSlotOrASE: true
+    resourceGroupName: 'PlainXai'
+    slotName: 'production'
+    package: '$(System.DefaultWorkingDirectory)'
+    runtimeStack: 'NODE|14-lts'
+    startUpCommand: 'npm run deploy'

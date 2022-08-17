@@ -1,0 +1,15 @@
+@import "ag-grid-community/dist/styles/ag-grid.css";
+
+.ag-theme-balham {
+    /* use theme parameters where possible */
+    --ag-row-hover-color: rgba(33, 150, 243, 0.1); /* #2196f3 */
+
+    font-family: Poppins, Helvetica, "sans-serif";
+
+    .ag-ltr .ag-cell {
+        border-right: 1px solid #D9DDDF !important;
+    }
+
+}
+
+

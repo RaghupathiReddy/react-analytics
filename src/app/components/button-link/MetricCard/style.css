@@ -1,0 +1,9 @@
+.link-text {
+    background: none!important;
+    border: none;
+    padding: 0!important;
+    font-family: Poppins, Helvetica, "sans-serif";
+    color: #0095E8;
+    cursor: pointer;
+    font-weight: 500;
+  }
